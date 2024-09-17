@@ -12,7 +12,7 @@ A simple calculator built using HTML, CSS, and JavaScript. The calculator allows
 - [Credits](#credits)
 
 ## Overview
-![Calculator](./calculator.png)
+![Calculator](./calculatrice/calcul.png)
 This is a basic calculator application where you can perform arithmetic operations such as addition, subtraction, multiplication, and division. The calculator includes a dark mode toggle to switch between light and dark themes for better user experience.
 
 ## Technologies Used
