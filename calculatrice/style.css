@@ -1,0 +1,186 @@
+/* Réinitialisation de base */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre */
+.title {
+    font-size: 2rem; /* Taille du titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #333; /* Couleur du titre */
+}
+
+/* Signature */
+.signature {
+    margin-top: 20px; /* Espacement au-dessus de la signature */
+    font-size: 1rem; /* Taille de la police de la signature */
+    color: #777; /* Couleur du texte de la signature */
+}
+
+/* Styles du switch */
+.toggle-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Calculatrice */
+.calculatrice {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px black;
+}
+
+/* Écran de la calculatrice */
+.ecran {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(198, 237, 255);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 25px;
+}
+
+/* Boutons */
+.touche {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 7px;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 3px #a8a8a8;
+    font-size: 18px;
+}
+
+button:active {
+    box-shadow: 0 1px #a8a8a8;
+    transform: translateY(2px);
+}
+
+button[data-key="8"] {
+    background-color: #ff9900;
+    font-weight: bold;
+    color: white;
+}
+
+button[data-key="13"] {
+    grid-column: span 2;
+    background-color: #36e700;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-image: linear-gradient(to top, #2c3e50 0%, #4a5969 100%);
+    color: white;
+}
+
+body.dark-mode .title, 
+body.dark-mode .signature {
+    color: #f0f0f0; /* Couleur claire pour le titre et la signature */
+}
+
+body.dark-mode .calculatrice {
+    background-color: #333333;
+    box-shadow: 0 5px #000;
+}
+
+body.dark-mode .ecran {
+    background-color: #444444;
+    color: white;
+}
+
+body.dark-mode .touche button {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 3px #222222;
+}
+
+body.dark-mode .touche button[data-key="8"] {
+    background-color: #e67e22;
+}
+
+body.dark-mode .touche button[data-key="13"] {
+    background-color: #27ae60;
+}
