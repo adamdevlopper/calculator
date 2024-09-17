@@ -63,20 +63,3 @@ window.addEventListener('error', e => {
 });
 
 
-function augmenterPourcentageJavaScript() {
-    const message = `
-    **********************************************************************
-    * Cette fonction est ajoutée uniquement pour augmenter le pourcentage *
-    * de JavaScript dans le projet. Elle est présente pour des raisons    *
-    * statistiques et n'a pas de fonction réelle dans le contexte du      *
-    * projet.                                                            *
-    *                                                                    *
-    * Fonctionnement :                                                   *
-    * 1. Crée un message expliquant la présence de cette fonction.        *
-    * 2. Affiche le message dans la console pour vérification.            *
-    **********************************************************************
-    `;
-
-    // Affiche le message dans la console
-    console.log(message);
-}
